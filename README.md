@@ -16,3 +16,8 @@ React (met useState voor state management)
 JSX & CSS
 Conditional Rendering
 Volledig functionele filtering aan de clientzijde
+
+
+## 📸 Screenshot
+
+![Screenshot van de Travel Packing List App](https://github.com/AlinaAMG/React-practicing/blob/travel-list/img/travelApp.jpg?raw=true)
