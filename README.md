@@ -21,3 +21,7 @@ Een eenvoudige maar leerzame React-applicatie waarin ik een pizzamenu heb gebouw
 - JavaScript (ES6+)
 - JSX
 - CSS 
+
+# 📸 Screenshot
+
+![Screenshot van de Pizza-Menu App](https://github.com/AlinaAMG/React-practicing/blob/pizza-menu/img/pizza-menu.jpg?rauw=true)
