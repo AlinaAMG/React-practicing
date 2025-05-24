@@ -21,3 +21,9 @@ Wat ik heb geleerd
 - `vanilla.html` → HTML-bestand om de vanilla versie te tonen en implementeren van vanilla javascript
 
 
+ Extra
+In de React-versie heb ik extra children props toegevoegd om de component flexibeler te maken en beter te begrijpen hoe props werken in combinatie met componentstructuur.
+
+
+ScreenShot
+![Steps Project Screenshot](https://github.com/AlinaAMG/React-practicing/blob/steps/img/steps.jpg?)
