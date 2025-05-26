@@ -25,6 +25,8 @@ Een eenvoudige maar handige React-app om rekeningen te splitsen met vrienden. Vo
 
 
 ![Eat and Split Screenshot](https://github.com/AlinaAMG/React-practicing/blob/eat-split-app/img/bill.jpg)
-![Eat and Split Screenshot][(https://github.com/AlinaAMG/React-practicing/blob/eat-split-app/img/eat-en-split.jpg)
+
+![Eat and Split Screenshot](https://github.com/AlinaAMG/React-practicing/blob/eat-split-app/img/eat-en-split.jpg).
+
 ![Eat and Split Screenshot](https://github.com/AlinaAMG/React-practicing/blob/eat-split-app/img/splibill.jpg)
 
