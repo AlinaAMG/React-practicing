@@ -1,4 +1,4 @@
-# 🎬 React Movie App
+# 🎬 React Movie App - usePopcorn
 
 Een interactieve React-app waarmee je films kunt zoeken, bekijken en beheren, gebaseerd op een externe API.
 
