@@ -1,23 +1,59 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { apiKey } from '../components/App';
 import { Loader } from './Loader';
 import StarRating from './StarRating';
+import { useKey } from './useKey';
 
-export function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
+export function MovieDetails({
+  selectedId,
+  onCloseMovie,
+  onAddWatched,
+  watched,
+}) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState('');
+
+  const countRef = useRef(0);
+
+  useEffect(() => {
+    if (userRating) countRef.current++;
+  }, [userRating]);
 
   const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId);
   console.log(isWatched);
 
   const watchedUserRating = watched.find(
-    (movie) => movie.imdbID === selectedId?.userRating
-  );
+    (movie) => movie.imdbID === selectedId
+  )?.userRating;
 
   const {
-    Title: title, Year: year, Poster: poster, Runtime: runtime, imdbRating, Plot: plot, Released: released, Actors: actors, Director: director, Genre: genre,
+    Title: title,
+    Year: year,
+    Poster: poster,
+    Runtime: runtime,
+    imdbRating,
+    Plot: plot,
+    Released: released,
+    Actors: actors,
+    Director: director,
+    Genre: genre,
   } = movie;
+
+  // const [isTop, setIsTop] = useState(imdbRating > 8);
+  // console.log(isTop);
+
+  // useEffect(
+  //   function () {
+  //     setIsTop(imdbRating > 8);
+  //   },
+  //   [imdbRating]
+  // );
+
+  const isTop = imdbRating > 8;
+  console.log(isTop);
+
+  // const [avgRating, setAvgRating] = useState(0);
 
   function handleAdd() {
     const newWatchedMovie = {
@@ -28,25 +64,15 @@ export function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }
       imdbRating: Number(imdbRating),
       runtime: Number(runtime.split(' ').at(0)),
       userRating,
+      countRatingDecisions: countRef.current,
     };
     onAddWatched(newWatchedMovie);
     onCloseMovie();
-  }
 
-  useEffect(
-    function () {
-      function callback(e) {
-        if (e.code === 'Escape') {
-          onCloseMovie();
-        }
-      }
-      document.addEventListener('keydown', callback);
-      return function () {
-        document.removeEventListener('keydown', callback);
-      };
-    },
-    [onCloseMovie]
-  );
+    // setAvgRating(Number(imdbRating));
+    // setAvgRating((avgRating) => (avgRating + userRating) / 2);
+  }
+  useKey('Escape', onCloseMovie);
 
   useEffect(
     function () {
@@ -89,7 +115,7 @@ export function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }
               &larr;
             </button>
             <img src={poster} alt={`poster of {movie} movie`} />
-            <div class="details-overview">
+            <div className="details-overview">
               <h2>{title}</h2>
               <p>
                 {released} &bull; {runtime}
@@ -101,6 +127,7 @@ export function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }
               </p>
             </div>
           </header>
+          {/* <p>{avgRating}</p> */}
           <section>
             <div className="rating">
               {!isWatched ? (
@@ -108,7 +135,8 @@ export function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }
                   <StarRating
                     maxRating={10}
                     size={26}
-                    onSetRating={setUserRating} />
+                    onSetRating={setUserRating}
+                  />
                   {userRating > 0 && (
                     <button className="btn-add" onClick={handleAdd}>
                       + Add to list
