@@ -4,7 +4,7 @@ const axios = require('axios');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+
 
 app.use(cors({origin:"https://movieapp-usepopcorn.netlify.app/"})); // Laat requests toe van je frontend
 
@@ -30,6 +30,10 @@ app.get('/api/movies', async (req, res) => {
     res.status(500).json({ error: 'Error fetching movie data' });
   }
 });
+
+module.exports = app;
+
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
