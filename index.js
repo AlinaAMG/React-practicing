@@ -31,6 +31,7 @@ app.get('/api/movies', async (req, res) => {
   }
 });
 
+console.log('OMDB_API_KEY is:', process.env.OMDB_API_KEY);
 module.exports = app;
 
 const PORT = process.env.PORT || 4000;
