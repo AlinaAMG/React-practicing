@@ -11,13 +11,11 @@ WorldWise is een interactieve React-app waarmee gebruikers hun favoriete vakanti
 - 🔗 Automatische link naar Wikipedia-artikelen over steden
 - 📌 Markers zetten op basis van locatie
 - 🗑️ Verwijderen van bestemmingen
-- 🧭 Gebruik van je eigen geolocatie (via `useGeolocation`)
+- 🧭 Werken met externe bibliotheken (zoals react-leaflet)
 - 💾 Data wordt beheerd met `useReducer` en `Context API`
 - 🌐 Navigatie tussen pagina’s met React Router
 - 🎨 Styling met CSS Modules
 - 🔄 Data fetching via `useEffect` en een lokale fake REST API (JSON Server)
-
----
 
 ## 🛠️ Tech Stack
 
