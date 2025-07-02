@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 
-app.use(cors({ origin: 'http://localhost:3000' })); // Laat requests toe van je frontend
+app.use(cors({ origin: "https://movieapp-usepopcorn.netlify.app, "})); // Laat requests toe van je frontend
 
 // Route: zoek films op titel
 app.get('/api/movies', async (req, res) => {
