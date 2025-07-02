@@ -81,7 +81,7 @@ export function MovieDetails({
       async function getMovieDetails() {
         setIsLoading(true);
         const res = await fetch(
-          `http://localhost:4000/api/movie?id=${selectedId}`
+          `https://react-practicing.onrender.com/api/movie?id=${selectedId}`
         );
         const data = await res.json();
         setMovie(data);

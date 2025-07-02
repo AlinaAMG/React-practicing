@@ -18,7 +18,7 @@ export function useMovies(query) {
             setError('');
     
             const res = await fetch(
-              `http://localhost:4000/api/movies?title=${query}`,
+              `https://react-practicing.onrender.com/api/movies?title=${query}`,
               { signal: controller.signal }
             );
     
