@@ -4,7 +4,7 @@ const fs = require("fs").promises;
 const path = require("path");
 
 const app = express();
-const PORT = 9000;
+
 
 
 app.use(cors({ origin: "https://worldwiseproject-app.netlify.app" })); 
@@ -34,6 +34,7 @@ app.get("/cities/:id", async (req, res) => {
     res.status(500).json({ message: "Fout bij het ophalen van stad", error: err.message });
   }
 });
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
     console.log(`Server is running op : ${PORT}`)
