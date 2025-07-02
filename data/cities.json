@@ -1,0 +1,124 @@
+{
+  "cities": [
+    {
+      "cityName": "Villefranche-de-Rouergue",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-06-30T11:19:32.126Z",
+      "notes": "",
+      "position": {
+        "lat": "44.35609334219948",
+        "lng": "2.0434570312500004"
+      },
+      "id": 1
+    },
+    {
+      "cityName": "Markt Rettenbach",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2025-06-30T11:19:35.612Z",
+      "notes": "",
+      "position": {
+        "lat": "47.91731447000373",
+        "lng": "10.393066406250002"
+      },
+      "id": 2
+    },
+    {
+      "cityName": "Comuna Albestii de Muscel",
+      "country": "Romania",
+      "emoji": "🇷🇴",
+      "date": "2025-06-30T11:19:39.010Z",
+      "notes": "",
+      "position": {
+        "lat": "45.34040396540966",
+        "lng": "24.982910156250004"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Couzou",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-07-02T11:47:21.390Z",
+      "notes": "",
+      "position": {
+        "lat": "44.79377210516498",
+        "lng": "1.6479492187500002"
+      },
+      "id": 4
+    },
+    {
+      "cityName": "Caillavet",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-07-02T17:14:27.310Z",
+      "notes": "",
+      "position": {
+        "lat": "43.707997264473526",
+        "lng": "0.3489895690674105"
+      },
+      "id": 5
+    },
+    {
+      "cityName": "Mennetou-sur-Cher",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-07-02T17:14:31.239Z",
+      "notes": "",
+      "position": {
+        "lat": "47.27959603211535",
+        "lng": "1.8646643765571904"
+      },
+      "id": 6
+    },
+    {
+      "cityName": "Tenneville",
+      "country": "Belgium",
+      "emoji": "🇧🇪",
+      "date": "2025-07-02T17:14:34.433Z",
+      "notes": "",
+      "position": {
+        "lat": "50.07871491926856",
+        "lng": "5.489358441184883"
+      },
+      "id": 7
+    },
+    {
+      "cityName": "Cuzaplac",
+      "country": "Romania",
+      "emoji": "🇷🇴",
+      "date": "2025-07-02T17:14:41.342Z",
+      "notes": "",
+      "position": {
+        "lat": "46.92125998396815",
+        "lng": "23.287210003684887"
+      },
+      "id": 8
+    },
+    {
+      "cityName": "Kocasinan",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2025-07-02T17:14:46.421Z",
+      "notes": "",
+      "position": {
+        "lat": "38.806634719527395",
+        "lng": "35.43788208268952"
+      },
+      "id": 9
+    },
+    {
+      "cityName": "Asadabad",
+      "country": "Iran (Islamic Republic of)",
+      "emoji": "🇮🇷",
+      "date": "2025-07-02T17:14:50.222Z",
+      "notes": "",
+      "position": {
+        "lat": "34.652437495198804",
+        "lng": "48.16059607536735"
+      },
+      "id": 10
+    }
+  ]
+}
