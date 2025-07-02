@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 
-app.use(cors({origin:"https://movieapp-usepopcorn.netlify.app/"})); // Laat requests toe van je frontend
+app.use(cors({ origin: 'http://localhost:3000' })); // Laat requests toe van je frontend
 
 // Route: zoek films op titel
 app.get('/api/movies', async (req, res) => {
@@ -28,6 +28,29 @@ app.get('/api/movies', async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Error fetching movie data' });
+  }
+});
+
+// Zoek film by its id
+app.get('/api/movie', async (req, res) => {
+  const { id } = req.query;
+
+  if (!id) {
+    return res.status(400).json({ error: 'No ID provided' });
+  }
+
+  try {
+    const response = await axios.get('https://www.omdbapi.com/', {
+      params: {
+        apikey: process.env.OMDB_API_KEY,
+        i: id,
+      },
+    });
+
+    res.json(response.data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Error fetching movie details' });
   }
 });
 
