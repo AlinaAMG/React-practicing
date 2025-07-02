@@ -1,0 +1,52 @@
+{
+  "cities": [
+    {
+      "cityName": "Villefranche-de-Rouergue",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-06-30T11:19:32.126Z",
+      "notes": "",
+      "position": {
+        "lat": "44.35609334219948",
+        "lng": "2.0434570312500004"
+      },
+      "id": 1
+    },
+    {
+      "cityName": "Markt Rettenbach",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2025-06-30T11:19:35.612Z",
+      "notes": "",
+      "position": {
+        "lat": "47.91731447000373",
+        "lng": "10.393066406250002"
+      },
+      "id": 2
+    },
+    {
+      "cityName": "Comuna Albestii de Muscel",
+      "country": "Romania",
+      "emoji": "🇷🇴",
+      "date": "2025-06-30T11:19:39.010Z",
+      "notes": "",
+      "position": {
+        "lat": "45.34040396540966",
+        "lng": "24.982910156250004"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Couzou",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-07-02T11:47:21.390Z",
+      "notes": "",
+      "position": {
+        "lat": "44.79377210516498",
+        "lng": "1.6479492187500002"
+      },
+      "id": 4
+    }
+  ]
+}
