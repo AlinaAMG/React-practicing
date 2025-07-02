@@ -6,7 +6,7 @@ import {
   useCallback,
 } from "react";
 
-const BASE_URL = "http://localhost:9000";
+const BASE_URL = 'https://worldwiseproject-uixg.onrender.com';
 
 const CitiesContext = createContext();
 
@@ -93,11 +93,11 @@ function CitiesProvider({ children }) {
       try {
         const res = await fetch(`${BASE_URL}/cities/${id}`);
         const data = await res.json();
-        dispatch({ type: "city/loaded", payload: data });
+        dispatch({ type: 'city/loaded', payload: data });
       } catch {
         dispatch({
-          type: "rejected",
-          payload: "There was an error loading the city...",
+          type: 'rejected',
+          payload: 'There was an error loading the city...',
         });
       }
     },
