@@ -12,7 +12,7 @@ import { WatchedSummary } from './WatchedSummary';
 import { WatchedMoviesList } from './WatchedMoviesList';
 import { useMovies } from './useMovies';
 import { useLocalStorageState } from './useLocalStorageState';
-
+import Footer from './Footer';
 
 export const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
@@ -96,6 +96,7 @@ export default function App() {
           )}
         </Box>
       </Main>
+      <Footer />
     </>
   );
 }
