@@ -16,7 +16,7 @@ WorldWise is een interactieve React-app waarmee gebruikers hun favoriete vakanti
 - 🌐 Navigatie tussen pagina’s met React Router
 - 🎨 Styling met CSS Modules
 - 🔄 Data fetching via `useEffect` en een lokale fake REST API (JSON Server)
-- 
+- 🔄 Gebruik van lazy loading om de prestaties te verbeteren
 
 ## 🛠️ Tech Stack
 
@@ -26,7 +26,7 @@ WorldWise is een interactieve React-app waarmee gebruikers hun favoriete vakanti
 - JSON Server (fake REST API)
 - Geolocation API
 - CSS Modules
-- 
+- Lazy Loading 
 ## 🚀 Live Demo
 https://worldwiseproject-app.netlify.app/
 
