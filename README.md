@@ -16,10 +16,11 @@ WorldWise is een interactieve React-app waarmee gebruikers hun favoriete vakanti
 - 🌐 Navigatie tussen pagina’s met React Router
 - 🎨 Styling met CSS Modules
 - 🔄 Data fetching via `useEffect` en een lokale fake REST API (JSON Server)
+- 
 
 ## 🛠️ Tech Stack
 
-- React (met hooks: `useState`, `useReducer`, `useEffect`, `useContext`)
+- React (met hooks: `useState`, `useReducer`, `useEffect`, `useContext`,`useCallback`)
 - React Router
 - Context API
 - JSON Server (fake REST API)
