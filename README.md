@@ -25,13 +25,13 @@ Een interactieve React-app waarmee je films kunt zoeken, bekijken en beheren, ge
 - Dynamisch updaten van lijsten en UI.
 
 
-## ScreenShots
-![Screenshot van de usePopcorn App](https://github.com/AlinaAMG/React-practicing/blob/movie-app/public/img/movies-app.jpg)
+# 📸 Screenshot
+![Screenshot van de usePopcorn App](https://github.com/AlinaAMG/React-practicing/blob/movieApp-frontend/public/img/movies-app.jpg);
 
-![Screenshot van de usePopcorn App](https://github.com/AlinaAMG/React-practicing/blob/movie-app/public/img/fetchedMovies.jpg)
+![Screenshot van de usePopcorn App](https://github.com/AlinaAMG/React-practicing/blob/movieApp-frontend/public/img/fetchedMovies.jpg)
 
-![Screenshot van de usePopcorn App](https://github.com/AlinaAMG/React-practicing/blob/movie-app/public/img/movieDetails.jpg)
+![Screenshot van de usePopcorn App](https://github.com/AlinaAMG/React-practicing/blob/movieApp-frontend/public/img/movieDetails.jpg)
 
-![Screenshot van de usePopcorn App](https://github.com/AlinaAMG/React-practicing/blob/movie-app/public/img/watchedMovies.jpg)
+![Screenshot van de usePopcorn App](https://github.com/AlinaAMG/React-practicing/blob/movieApp-frontend/public/img/watchedMovies.jpg)
 
 
