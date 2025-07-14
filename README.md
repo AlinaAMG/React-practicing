@@ -66,3 +66,15 @@ Fast React Pizza Co is een moderne pizza webapplicatie gebouwd met **React**, **
 
 
 ## 📸 Screenshots
+
+![Screenshot van de FAST REACT PIZZA CO. App](https://github.com/AlinaAMG/React-practicing/blob/FastReactPizza/public/img/fastpizza-homepage.jpg)
+
+![Screenshot van de FAST REACT PIZZA CO. App](https://github.com/AlinaAMG/React-practicing/blob/FastReactPizza/public/img/menupage.jpg)
+
+![Screenshot van de FAST REACT PIZZA CO. App](https://github.com/AlinaAMG/React-practicing/blob/FastReactPizza/public/img/neworder.jpg)
+
+![Screenshot van de FAST REACT PIZZA CO. App](https://github.com/AlinaAMG/React-practicing/blob/FastReactPizza/public/img/cartpage.jpg)
+
+![Screenshot van de FAST REACT PIZZA CO. App](https://github.com/AlinaAMG/React-practicing/blob/FastReactPizza/public/img/detailsorder.jpg)
+
+
