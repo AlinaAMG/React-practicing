@@ -2,6 +2,8 @@
 
 Fast React Pizza Co is een moderne pizza webapplicatie gebouwd met **React**, **Redux Toolkit**, **React Router** en **Tailwind CSS**. Klanten kunnen pizza’s bekijken, toevoegen aan hun winkelmandje, hun bestelling beheren, hun locatie ophalen via geolocatie, en uiteindelijk hun pizza bestellen – allemaal met een gebruiksvriendelijke en interactieve interface.
 
+## https://fast-reactpizzaapp.netlify.app/
+
 ## 🚀 Features
 
 ### 🔹 Homepage
