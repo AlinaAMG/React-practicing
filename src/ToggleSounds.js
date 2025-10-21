@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import { memo } from "react";
 
-=======
->>>>>>> e3f6466 (foto toegevoegd)
 function ToggleSounds({ allowSound, setAllowSound }) {
   return (
     <button
@@ -14,8 +11,4 @@ function ToggleSounds({ allowSound, setAllowSound }) {
   );
 }
 
-<<<<<<< HEAD
 export default memo(ToggleSounds);
-=======
-export default ToggleSounds;
->>>>>>> e3f6466 (foto toegevoegd)
