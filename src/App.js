@@ -4,11 +4,13 @@ import ToggleSounds from './ToggleSounds';
 
 function formatTime(date) {
   return new Intl.DateTimeFormat('en', {
+    day: '2-digit',
     month: 'short',
     year: '2-digit',
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
+    timeZone: 'Europe/Amsterdam',
   }).format(date);
 }
 
