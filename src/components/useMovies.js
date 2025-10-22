@@ -10,50 +10,57 @@ export function useMovies(query) {
  
     useEffect(() => {
         // callback?.();
-        const controller = new AbortController();
-    
-        async function fetchMovies() {
-          try {
-            setIsLoading(true);
-            setError('');
-    
-            const res = await fetch(
-              `https://react-practicing.onrender.com/api/movies?title=${query}`,
-              { signal: controller.signal }
-            );
-    
-            if (!res.ok)
-              throw new Error('Something went wrong with fetching movies');
-    
-            const data = await res.json();
-            console.log(data);
-    
-            if (data.Response === 'False') {
-              throw new Error('Movie not found!');
-            }
-            setMovies(data.Search);
-            setError('');
-          } catch (err) {
-            console.log(err.message);
-    
-            if (err.name !== 'AbortError') {
-              setError(err.message);
-            }
-          } finally {
-            setIsLoading(false);
+      const controller = new AbortController();
+      let timer;
+
+      async function fetchMovies() {
+        try {
+          setIsLoading(true);
+          setError('');
+
+          const res = await fetch(
+            `https://react-practicing.onrender.com/api/movies?title=${query}`,
+            { signal: controller.signal }
+          );
+
+          if (!res.ok)
+            throw new Error('Something went wrong with fetching movies');
+
+          const data = await res.json();
+          console.log(data);
+
+          if (data.Response === 'False') {
+            throw new Error('Movie not found!');
           }
+          setMovies(data.Search);
+          setError('');
+        } catch (err) {
+          console.log(err.message);
+
+          if (err.name !== 'AbortError') {
+            setError(err.message);
+          }
+        } finally {
+          setIsLoading(false);
         }
-    
-        if (query.length < 3) {
-          setMovies([]);
-          return;
-        }
-        // handleCloseMovie();
+      }
+
+      if (query.length < 3) {
+        setMovies([]);
+        setError('');
+        return;
+      }
+
+      timer = setTimeout(() => {
         fetchMovies();
+      }, 500);
+
+      // Cleanup
+      return () => {
+        clearTimeout(timer);
+        controller.abort();
+      };
     
-        return function () {
-          controller.abort();
-        };
       }, [query]);
     
     return {movies,isLoading,error}
