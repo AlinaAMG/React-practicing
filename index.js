@@ -5,7 +5,7 @@ const path = require("path");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: 'https://worldwiseproject-app.netlify.app/ ' }));
+app.use(cors({ origin: 'https://worldwiseproject-app.netlify.app' }));
 
 app.get('/cities', async (req, res) => {
   try {
