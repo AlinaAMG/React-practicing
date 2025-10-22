@@ -6,7 +6,14 @@ const cors = require('cors');
 const app = express();
 
 
-app.use(cors({ origin: "https://movieapp-usepopcorn.netlify.app"})); // Laat requests toe van je frontend
+app.use(
+  cors({
+    origin: [
+      'https://movieapp-usepopcorn.netlify.app',
+      'http://localhost:3000',
+    ],
+  })
+); // Laat requests toe van je frontend
 
 // Route: zoek films op titel
 app.get('/api/movies', async (req, res) => {
@@ -22,9 +29,18 @@ app.get('/api/movies', async (req, res) => {
         apikey: process.env.OMDB_API_KEY,
         s: title,
       },
+      timeout: 8000,
     });
 
-    res.json(response.data);
+    // Hier filter je de data voordat je ze naar je frontend stuurt:
+    const results = response.data.Search?.map((movie) => ({
+      title: movie.Title,
+      year: movie.Year,
+      poster: movie.Poster,
+      imdbID: movie.imdbID,
+    }));
+
+    res.json(results || []);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Error fetching movie data' });
