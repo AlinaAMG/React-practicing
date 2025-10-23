@@ -1,4 +1,4 @@
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import {
   MapContainer,
   TileLayer,
@@ -6,14 +6,14 @@ import {
   Popup,
   useMap,
   useMapEvents,
-} from "react-leaflet";
+} from 'react-leaflet';
 
-import styles from "./Map.module.css";
-import { useEffect, useState } from "react";
-import { useCities } from "../contexts/CitiesContext";
-import { useGeolocation } from "../hooks/useGeolocation";
-import { useUrlPosition } from "../hooks/useUrlPosition";
-import Button from "./Button";
+import styles from './Map.module.css';
+import { useEffect, useState } from 'react';
+import { useCities } from '../contexts/CitiesContext';
+import { useGeolocation } from '../hooks/useGeolocation';
+import { useUrlPosition } from '../hooks/useUrlPosition';
+import Button from './Button';
 
 function Map() {
   const { cities } = useCities();
@@ -39,12 +39,12 @@ function Map() {
     },
     [geolocationPosition]
   );
-
+  console.log('cities in Map:', cities);
   return (
     <div className={styles.mapContainer}>
       {!geolocationPosition && (
         <Button type="position" onClick={getPosition}>
-          {isLoadingPosition ? "Loading..." : "Use your position"}
+          {isLoadingPosition ? 'Loading...' : 'Use your position'}
         </Button>
       )}
 
@@ -58,16 +58,25 @@ function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
-        {cities.map((city) => (
-          <Marker
-            position={[city.position.lat, city.position.lng]}
-            key={city.id}
-          >
-            <Popup>
-              <span>{city.emoji}</span> <span>{city.cityName}</span>
-            </Popup>
-          </Marker>
-        ))}
+        {Array.isArray(cities) && cities.length > 0 ? (
+          cities
+            .filter((city) => {
+              if (!city.position) console.log('City missing position:', city);
+              return city.position;
+            })
+            .map((city) => (
+              <Marker
+                position={[city.position.lat, city.position.lng]}
+                key={city.id || city.cityName + city.date}
+              >
+                <Popup>
+                  <span>{city.emoji}</span> <span>{city.cityName}</span>
+                </Popup>
+              </Marker>
+            ))
+        ) : (
+          <p>No cities to display</p>
+        )}
 
         <ChangeCenter position={mapPosition} />
         <DetectClick />
